@@ -1,7 +1,29 @@
 # PyBark
 Push important notifications to iOS devices using Bark app and Python3.
 
-### Example
+### Example 1
+Directly push a message to your iPhone:
+
+`./iPhone/server.txt` is your server link, and the default is
+```
+https://api.day.app
+```
+
+`./iPhone/device.txt` is your device key which can be found on the link of your Bark App. For example, if the __Body Text__ in your app reads `https://api.day.app/xxxxxxxxxxxxxxxxxxxxxx/Body Text`, your device key is `xxxxxxxxxxxxxxxxxxxxxx`, and you should write
+```
+xxxxxxxxxxxxxxxxxxxxxx
+```
+
+`./iPhone/aes.txt` will not be used as no encryption is enabled.
+
+`./example.py` is the example code to use PyBark
+```python
+from pybark import PyBark
+bk = PyBark('./iPhone')
+bk.send('Hello World!')
+```
+
+### Example 2
 Push an AES-256-CBC encrypted message to your iPhone:
 
 `./iPhone/server.txt` is your server link, and the default is
