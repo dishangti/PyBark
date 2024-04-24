@@ -1,6 +1,9 @@
 # PyBark
 Push important notifications to iOS devices using Bark app and Python3.
 
+### Requirements
+The package is developed and tested under Python 3.10.14, and other required packages are in `requirements.txt`. 
+
 ### Example 1
 Directly push a message to your iPhone:
 
